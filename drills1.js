@@ -3,13 +3,9 @@
 function createGreeting (name, age) {
     if(name === undefined || age === undefined) {
         throw new Error('Arguments not valid');
-    }
-
-    if(age < 0) {
+    } else if(age < 0) {
         throw new Error('Age can not be negative');
-    }
-
-    if(typeof age !== 'number') {
+    } else if(typeof age !== 'number') {
         throw new TypeError('Age is not a number');
     }
 
